@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Nepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background: #ff5722;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for small screens */
+    padding: 0 2rem;
+}
+
+/* Logo and Title Styling */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between logo and title */
+    flex: 1;
+}
+
+.logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the logo circular */
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allows wrapping for small screens */
+    justify-content: center; /* Center navigation on small screens */
+    margin: 0;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Adds padding for clickable area */
+    border-radius: 5px; /* Rounds the edges */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    background: transparent; /* Transparent background by default */
+}
+
+nav ul li a:hover {
+    color: #0c71f4; /* Changes text color on hover */
+    text-decoration: none; /* Removes underline (optional) */
+    background: #f4f4f4; /* Adds a light background color on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transform: scale(3.0); /* Slightly enlarges the item */
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    color: white; /* White text for contrast */
+    background: url("./Image/cover1.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Ensure hero section has relative positioning */
+    z-index: 1; /* Hero section will be on top of the video */
+}
+
+    .hero h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        color: #A9D0E6; /* Vibrant orange */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow for depth */
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        color: #D8A7A2; /* Light gray text */
+        font-weight: bold; /* Bold text */
+        margin-bottom: 2rem;
+        z-index: 4; /* Ensure paragraph is on top of the overlay */
+    }
+    
+
+/* About Section */
+#about {
+    padding: 2rem 1rem;
+    padding-top: 20px; /* Padding to avoid overlap from hero section */
+}
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+#about .container {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#about p {
+    font-size: 1.2em; /* Slightly larger font for better readability */
+    line-height: 1.7; /* More space between lines for ease of reading */
+    text-align: justify; /* Justified text for clean edges */
+    color: #4a4a4a; /* Dark grey color for the text */
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    margin-top: 20px; /* Space above the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+    padding: 15px; /* Padding around the text for spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners for soft edges */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 800px; /* Limit width for better readability */
+    margin-left: auto; /* Center the paragraph */
+    margin-right: auto; /* Center the paragraph */
+}
+
+#about p::first-letter {
+    font-size: 2.5em; /* Make the first letter larger for style */
+    font-weight: bold; /* Make the first letter bold */
+    color: #f39c12; /* Give the first letter a golden color */
+    margin-right: 5px; /* Add space between the first letter and the rest of the text */
+}
+
+#about p:hover {
+    background-color: #ecf0f1; /* Change background on hover */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+
+/* Destination Section */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1rem;
+    padding: 2rem;
+}
+#destination h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.destination-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#destination .container{
+    text-align:center;
+    padding:2rem 1rem;
+}
+.destination-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destination-item .description {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+.destination-item:hover {
+    transform: scale(1.05);
+}
+
+.destination-item .read-more {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f7b731;
+    border: none;
+    cursor: pointer;
+}
+
+.destination-item .read-more:hover {
+    background-color: #f39c12;
+}
+/* Styling for Read More Button */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #0078ff;
+    color: #ffffff;
+    text-decoration: none; /* Removes underline */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.read-more:hover {
+    background-color: #0056cc;
+    transform: scale(1.05); /* Adds a slight zoom effect */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.read-more:active {
+    transform: scale(0.98); /* Slightly reduces size when clicked */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Food & Beverage Section Styling */
+#food-beverage {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#food-beverage h2 {
+    font-size: 2.5rem;
+    color: #ff5722;
+    margin-bottom: 1rem;
+}
+
+#food-beverage p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.food-items {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.food-item {
+    width: 250px;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    justify-content: space-between; /* Align button at the bottom */
+    min-height: 400px; /* Set a consistent height */
+}
+
+.food-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.food-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    flex-grow: 1;
+}
+
+.food-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.food-img:hover {
+    transform: scale(1.05);
+}
+.food-item .read-more {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f7b731;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.food-item .read-more:hover {
+    background-color: #f39c12;
+}
+
+
+
+/* Contact Section */
+#feedback {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#feedback .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#feedback h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+#feedback form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#feedback form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#feedback form input, 
+#feedback form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#feedback form button {
+    background: #fda085;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#feedback form button:hover {
+    background: #f6d365;
+}
+/*contactus section */
+#contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#contact .social-media {
+    margin-top: 20px;
+}
+
+#contact .social-media p {
+    color: #e73212;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#contact .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0654f0;
+    font-size: 2.5em;
+    transition: color 0.3s;
+}
+#contact .social-media a i {
+    transition: color 0.3s;
+}
+#contact .social-media a:hover {
+    transform: scale(1.2);
+}
+#contact .social-media a .fa-facebook {
+    color: #3b5998;
+}
+
+#contact .social-media a .fa-twitter {
+    color: #1da1f2;
+}
+
+#contact .social-media a .fa-instagram {
+    color: #e1306c;
+}
+
+#contact .social-media a .fa-linkedin {
+    color: #0077b5;
+}
+/* Location Section Styling */
+#location {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#location h2 {
+    font-size: 2.5rem;
+    color: #ff5722; /* Vibrant orange */
+    margin-bottom: 1rem;
+}
+
+#location p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#location iframe {
+    border-radius: 8px;
+}
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design: Media Queries */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    nav ul li a {
+        padding: 0.7rem 1rem; /* Slightly larger padding for touch devices */
+        font-size: 1rem; /* Adjust font size for readability */
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+    #contact h2 {
+        font-size: 2em;
+    }
+
+    #contact form {
+        padding: 20px;
+    }
+
+    #contact form button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    #contact .social-media a {
+        font-size: 1.2em;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 0.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+    #contact form {
+        padding: 15px;
+    }
+
+    #contact form input, 
+    #contact form textarea {
+        font-size: 0.9em;
+    }
+
+    #contact .social-media p {
+        font-size: 1em;
+    }
+
+    #contact .social-media a {
+        font-size: 1em;
+        margin: 0 5px;
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-title">
+                <img src="./Image/logo.jpg" alt="Visit Nepal Logo" class="logo">
+                <h1>VISIT NEPAL 2025</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#destination">Destination</a></li>
+                    <li><a href="#food-beverage">Food & Beverage</a></li> 
+                    <li><a href="#feedback">Feedback</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Himalayas, Heritage, and Harmony.</h2>
+            <p>"Discover the land where majestic peaks meet timeless culture, and every journey feels like a homecoming."</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Nepal</h2>
+            <p>Nepal is a landlocked nation situated in South Asia, bordered by China to the north and India to the south, east, and west. Famous for its breathtaking natural beauty, it is home to Mount Everest, the highest mountain in the world, and offers a diverse landscape with the flat Terai plains, lush hills, and towering peaks. Kathmandu, the capital and largest city, along with other notable cities like Pokhara and Lalitpur, is a hub of cultural and historical significance. The country boasts a rich cultural tradition, with Hinduism being the dominant religion, followed by Buddhism, and smaller Muslim and Christian communities. Major festivals such as Dashain, Tihar, and Buddha Jayanti reflect the country's vibrant traditions. Nepal's history dates back to ancient times, and it was a monarchy until 2008, when it became a federal democratic republic. Though it has faced political instability, Nepal is making strides toward greater stability. Tourism is a major contributor to the economy, particularly for trekking, mountaineering, and spiritual tourism, while agriculture and remittances from Nepali workers abroad also play a key role. Nepali is the official language, though over 120 other languages are spoken across the country, highlighting its ethnic diversity. The climate varies from tropical in the lowlands to alpine in the high mountains, supporting diverse ecosystems and agricultural practices.</p>
+        </div>
+    </section>
+
+    <section id="destination">
+        <div class="container">
+            <h2>Destination</h2>
+            <div class="destination-grid">
+                <div class="destination-item">
+                    <img src="./Image/mountain.jpeg" alt="Mountain View">
+                    <p class="description">The mighty Himalayas, home to Mount Everest, offer breathtaking views and challenging treks.</p>
+                    <a href="./Pages/Mountain.html" class="read-more">Read More</a>
+                </div>
+                <div class="destination-item">
+                    <img src="./Image/temple.jpg" alt="Temple">
+                    <p class="description">Ancient temples, steeped in history, reflect Nepal's rich cultural heritage and spiritual traditions.</p>
+                    <a href="./Pages/Temple.html" class="read-more">Read More</a>
+                </div>
+                <div class="destination-item">
+                    <img src="./Image/trekking.jpg" alt="Trekking">
+                    <p class="description">Nepal offers some of the world's most famous trekking routes, perfect for adventure seekers.</p>
+                    <a href="./Pages/Trekking.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="food-beverage">
+        <div class="container">
+            <h2>Food & Beverage</h2>
+            <p>Explore a wide range of food and beverages we offer. Whether you're looking for a quick snack or a full meal, we have something to satisfy every craving.</p>
+            
+            <div class="food-items">
+                <div class="food-item">
+                    <img src="./Image/Food1.jpg" alt="Coffee & Tea" class="food-img">
+                    <h3>Lunch</h3>
+                    <p>Lunch in Nepal typically features dal-bhat-tarkari, a wholesome meal of rice, lentil soup, vegetables, and optional meat, reflecting rich culinary traditions.</p>
+                    <a href="./Pages/Lunch.html" class="read-more">Read More</a>
+                </div>
+                <div class="food-item">
+                    <img src="./Image/Food2.jpg" alt="Snacks" class="food-img">
+                    <h3>Snacks</h3>
+                    <p>A popular Newari snack in Nepal is "Samay Baji", a traditional platter featuring beaten rice, buffalo meat, boiled eggs, and spicy potato salad, symbolizing cultural heritage.</p>
+                    <a href="./Pages/Snacks.html" class="read-more">Read More</a>
+                </div>
+                <div class="food-item">
+                    <img src="./Image/roti2.jpg" alt="Meals" class="food-img">
+                    <h3>Dinner</h3>
+                    <p>A light dinner in Nepal often includes "Roti" (flatbread) served with curry, lentil soup, or yogurt, offering a simple yet satisfying meal.</p>
+                    <a href="./Pages/Dinner.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="feedback">
+        <div class="container">
+            <h2>Feedback Us</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="social-media">
+                <p>Follow us:</p>
+                <a href="https://www.facebook.com/profile.php?id=100092154215572"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/surath2054?s=21"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/niraula.bipul?igsh=OHE1Zm44dms4MjN0&utm_source=qr
+                "><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Location Section -->
+    <section id="location">
+        <div class="container">
+            <h2>Our Location</h2>
+            <p>We are located at the heart of Kathmandu, in Tinkune. Visit us at:</p>
+            <p><strong>Office Address:</strong> Tinkune, Kathmandu, Nepal</p>
+            <!-- Embed Google Map iframe for the location -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4360922178475!2d85.3554718145321!3d27.689430182804116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199d8b3f69d9%3A0x586cb655935c663a!2sTinkune%2C%20Kathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1674062388697!5m2!1sen!2sus" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Visit Nepal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Nepalese Dinner</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            color: #333;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(to right, #bc4e00, #ff704d);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Dinner Section */
+        .dinner-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .dinner-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensure content is spaced evenly */
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dinner-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .dinner-item img {
+            width: 100%;
+            height: 200px;
+            border-bottom: 3px solid #bc4e00;
+        }
+        .dinner-item .content {
+            padding: 20px;
+        }
+        .dinner-item h3 {
+            font-size: 1.8em;
+            color: #bc4e00;
+            margin-bottom: 10px;
+        }
+        .dinner-item p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        /* Explore More Button */
+        .explore-more-btn {
+            align-self: flex-start; /* Align the button to the left */
+            margin-top: auto; /* Push button to the bottom */
+            padding: 10px 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: white;
+            background:  #ff5733;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .explore-more-btn:hover {
+            background-color: #e67600; /* Ensure hover effect */
+        }
+
+        /* Additional Info Section */
+        .more-info {
+            background: #ffe6e0;
+            padding: 30px 20px;
+            border-left: 5px solid #bc4e00;
+            margin: 20px 0;
+        }
+        .more-info h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .more-info p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+         /* Next Page Button */
+         .next-page-btn {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background:#bc4e00;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            width: fit-content;
+        }
+
+        .next-page-btn:hover {
+            background: #e67600;
+        }
+
+        /* Footer */
+        footer {
+            background: #bc4e00;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .dinner-item h3 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traditional Nepalese Dinner</h1>
+        <p>Explore the rich and flavorful dinner traditions of Nepal</p>
+    </header>
+
+    <div class="container">
+        <section class="dinner-section">
+            <!-- Dish 1 -->
+            <div class="dinner-item">
+                <img src="..//Image/fruits1.jpg" alt="Fruits">
+                <div class="content">
+                    <h3>Fruits</h3>
+                    <p>Fruits are nature's nutrient-packed wonders, offering a variety of flavors, textures, and colors. They are the mature ovary of flowering plants, often containing seeds, and serve as a key part of a balanced diet.</p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+            </div>
+
+            <!-- Dish 2 -->
+            <div class="dinner-item">
+                <img src="..//Image/new.jpg" alt="Newari Feast">
+                <div class="content">
+                    <h3>Newari Feast</h3>
+                    <p>Originating from the Newar community, this dinner spread includes dishes like Bara, Chhoyela, Wo, and beaten rice. It's a flavorful experience of spices, textures, and heritage.</p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+            </div>
+
+            <!-- Dish 3 -->
+            <div class="dinner-item">
+                <img src="..//Image/Gundruk.jpg" alt="Gundruk">
+                <div class="content">
+                    <h3>Gundruk and Dhido</h3>
+                    <p>Gundruk is a fermented leafy green vegetable often paired with Dhido, a traditional buckwheat or millet porridge. This dish represents the essence of Nepalese mountain cuisine.</p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+            </div>
+
+            <!-- Dish 4 -->
+            <div class="dinner-item">
+                <img src="..//Image/yomari.jpg" alt="Yomari">
+                <div class="content">
+                    <h3>Yomari</h3>
+                    <p>A Newari delicacy, Yomari is a steamed dumpling filled with sweet molasses or sesame seeds, often enjoyed during festivals and special dinners.</p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+            </div>
+
+            <!-- Dish 5 -->
+            <div class="dinner-item">
+                <img src="..//Image/momo.jpeg" alt="Momo">
+                <div class="content">
+                    <h3>Momo</h3>
+                    <p>A beloved Nepalese dinner option, momos are dumplings filled with meat or vegetables, served with spicy chutney. They’re a perfect blend of taste and tradition.</p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+            </div>
+
+            <!-- Dish 6 -->
+            <div class="dinner-item">
+                <img src="..//Image/sukuti.jpg" alt="Sukuti">
+                <div class="content">
+                    <h3>Sukuti</h3>
+                    <p>Sukuti, or dried meat, is a flavorful dish often cooked with spices and served with rice or beaten rice. It's a favorite among meat lovers in Nepal.</p>
+                    <button class="explore-more-btn">Explore More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Info Section -->
+        <div class="more-info">
+            <h2>Why Nepalese Dinner?</h2>
+            <p>Nepalese dinners are a perfect blend of taste, nutrition, and tradition. From simple yet hearty meals like Dal Bhat to festive feasts like the Newari spread, Nepal offers a diverse culinary experience that reflects its cultural richness and natural bounty.</p>
+        </div>
+        <a href="nextpage.html" class="next-page-btn">Next Page &raquo;</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Visit Nepal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
